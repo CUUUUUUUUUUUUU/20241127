@@ -1,0 +1,133 @@
+/* 重置基本樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding-top: 60px; /* 預留空間給固定在頂部的 header */
+}
+
+/* Header 樣式 */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between; /* Logo 靠左，圖標靠右 */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    display: inline-block;
+}
+
+.header ul {
+    display: flex;
+    gap: 10px; /* 調整圖標之間的距離 */
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+/* 卡片容器樣式 */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 卡片樣式 */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 100%;
+    padding-bottom: 100%; /* 使卡片呈現正方形 */
+    position: relative; /* 設定為相對定位，以便子元素使用絕對定位 */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 讓圖片保持比例縮放並填滿容器 */
+    position: absolute; /* 使圖片覆蓋整個卡片 */
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+/* 卡片內文字樣式 */
+.text {
+    padding: 15px;
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    bottom: 0; /* 將文字固定在卡片底部 */
+    background-color: rgb(255, 255, 255); /* 加白色半透明背景，避免文字被圖片影響 */
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 卡片 hover 效果 */
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card:hover img {
+    transform: scale(1.1); /* 放大圖片效果 */
+}
+
+
+
+.header ul li .facebook-icon:hover {
+    content: url('./img/facebook.png');
+}
+
+.header ul li .instagram-icon:hover {
+    content: url('./img/instagram\ \(1\).png');
+}
+
+.header ul li .youtube-icon:hover {
+    content: url('./img/youtube-2.png');
+}
+a {
+    text-decoration: none;
+    color: inherit; /* 繼承父元素的顏色，讓文字在非 hover 狀態下顏色保持一致 */
+}
+
+a:hover, a:active {
+    color: yellow; /* 超連結在 hover 和點擊時變成黃色 */
+}
+
+h2{
+    padding: 40px;
+    padding-left: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
