@@ -1,0 +1,21 @@
+.gif-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.gif-player {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 移除可能的邊距 */
+body {
+    margin: 0;
+    padding: 0;
+} 
